@@ -3,3 +3,8 @@
 ################################################################################
 
 /HostingStartupDemo/bin/Debug/netcoreapp3.1
+/HostingStartupLibrary/bin/Debug/netcoreapp3.1
+/HostingStartupLibrary/obj
+/HostingStartupDemo/obj
+/StartupFilterDemo/bin/Debug/netcoreapp3.1
+/StartupFilterDemo/obj
