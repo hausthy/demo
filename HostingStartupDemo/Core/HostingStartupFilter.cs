@@ -13,11 +13,7 @@ namespace HostingStartupDemo.Core
             return app =>
             {
 
-                var loggerFactory = app.ApplicationServices.GetService<ILoggerFactory>();
-
-                var _logger = loggerFactory.CreateLogger<HostingStartupFilter>();
-
-                _logger.LogInformation("HostingStartupFilter");
+                Console.WriteLine("HostingStartupFilter.Middleware");
 
                 app.UseMiddleware<InWebMiddleware>();
                 next(app);

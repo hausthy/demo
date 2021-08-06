@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -29,14 +30,21 @@ namespace HostingStartupDemo.Core
             //可以添加ConfigureServices
             builder.ConfigureServices(services =>
             {
+                Console.WriteLine("HostingStartupInWeb.ConfigureServices ");
                 services.AddSingleton<IStartupFilter, HostingStartupFilter>();
             });
 
-            ////可以添加Configure
-           // builder.Configure(app =>
-           //{
-           //    app.UseMiddleware<InWebMiddleware>();
-           //});
+            //可以添加Configure
+            builder.Configure((builder) =>
+           {
+               Console.WriteLine("HostingStartupInWeb.Configure ");
+
+               builder.Use(async (context, next) =>
+               {
+                   Console.WriteLine("HostingStartupInWeb.Configure.Use");
+                   await next();
+               });
+           });
         }
     }
 }
