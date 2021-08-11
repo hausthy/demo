@@ -11,16 +11,16 @@ namespace AspectCoreDemo.Core
     {
 
         [FromServiceContext]
-        public ILogger<CustomInterceptor> Logger { get; set; }
+        public ILogger<CustomInterceptorAttribute> Logger { get; set; }
 
 
         public override async Task Invoke(AspectContext context, AspectDelegate next)
         {
-            Logger.LogInformation($"{context.ServiceMethod.Name} Invoke Begin");
+            Logger?.LogInformation($"{context.ServiceMethod.Name} Invoke Begin");
 
             await next(context);
 
-            Logger.LogInformation($"{context.ServiceMethod.Name} Invoke End");
+            Logger?.LogInformation($"{context.ServiceMethod.Name} Invoke End");
         }
     }
 }

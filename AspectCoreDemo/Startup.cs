@@ -24,6 +24,7 @@ namespace AspectCoreDemo
             services.AddControllers().AddControllersAsServices();
 
             //services.AddSingleton<CustomInterceptor>();
+            services.AddSingleton<CustomServiceInterceptor>();
 
             services.ConfigureDynamicProxy(config =>
             {

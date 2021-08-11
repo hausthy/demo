@@ -9,10 +9,8 @@ namespace AspectCoreDemo.Core
 {
     public class CustomInterceptor : AbstractInterceptor
     {
-
         [FromServiceContext]
         public ILogger<CustomInterceptor> Logger { get; set; }
-
 
         public override async Task Invoke(AspectContext context, AspectDelegate next)
         {
