@@ -7,7 +7,7 @@ using AspectCore.DependencyInjection;
 
 namespace AspectCoreDemo.Core
 {
-    public class CustomInterceptorAttribute : AbstractInterceptorAttribute
+    public class CustomInterceptor : AbstractInterceptor
     {
 
         [FromServiceContext]

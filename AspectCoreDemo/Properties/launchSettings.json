@@ -18,8 +18,7 @@
     },
     "AspectCoreDemo": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "order",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

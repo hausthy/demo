@@ -24,9 +24,9 @@ namespace AspectCoreDemo.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet("attr")]
         [CustomInterceptor]
-        public IEnumerable<WeatherForecast> GetOrder()
+        public virtual IEnumerable<WeatherForecast> GetOrder1()
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -39,7 +39,7 @@ namespace AspectCoreDemo.Controllers
         }
 
         [HttpGet("virtual")]
-        [CustomInterceptor]
+        //[CustomInterceptor]
         public virtual IEnumerable<WeatherForecast> GetVirtualOrder()
         {
             var rng = new Random();

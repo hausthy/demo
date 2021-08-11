@@ -23,10 +23,12 @@ namespace AspectCoreDemo
         {
             services.AddControllers().AddControllersAsServices();
 
+            //services.AddSingleton<CustomInterceptor>();
+
             services.ConfigureDynamicProxy(config =>
             {
-                //添加AOP的配置
-                //config.Interceptors.AddServiced<CustomInterceptorAttribute>(method => method.Name.EndsWith("Order"));
+                //添加AOP的配置               
+                config.Interceptors.AddTyped<CustomInterceptor>(method => method.Name.EndsWith("Order"));
             });
         }
 
