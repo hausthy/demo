@@ -40,7 +40,6 @@ namespace AspectCoreDemo.Controllers
         }
 
         [HttpGet("virtual")]
-        //[CustomInterceptor]
         public virtual IEnumerable<WeatherForecast> GetVirtualOrder()
         {
             var rng = new Random();
@@ -53,8 +52,6 @@ namespace AspectCoreDemo.Controllers
             .ToArray();
         }
 
-
-        
         [HttpGet("service")]
         [ServiceInterceptor(typeof(CustomServiceInterceptor))]
         public virtual IEnumerable<WeatherForecast> GetServiceInterceptor()
