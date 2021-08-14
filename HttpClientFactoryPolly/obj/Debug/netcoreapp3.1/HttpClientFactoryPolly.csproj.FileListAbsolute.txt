@@ -10,7 +10,6 @@ E:\github\hausthy\demo\HttpClientFactoryPolly\bin\Debug\netcoreapp3.1\Microsoft.
 E:\github\hausthy\demo\HttpClientFactoryPolly\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\github\hausthy\demo\HttpClientFactoryPolly\bin\Debug\netcoreapp3.1\Polly.dll
 E:\github\hausthy\demo\HttpClientFactoryPolly\bin\Debug\netcoreapp3.1\Polly.Extensions.Http.dll
-E:\github\hausthy\demo\HttpClientFactoryPolly\obj\Debug\netcoreapp3.1\HttpClientFactoryPolly.csproj.AssemblyReference.cache
 E:\github\hausthy\demo\HttpClientFactoryPolly\obj\Debug\netcoreapp3.1\HttpClientFactoryPolly.AssemblyInfoInputs.cache
 E:\github\hausthy\demo\HttpClientFactoryPolly\obj\Debug\netcoreapp3.1\HttpClientFactoryPolly.AssemblyInfo.cs
 E:\github\hausthy\demo\HttpClientFactoryPolly\obj\Debug\netcoreapp3.1\HttpClientFactoryPolly.csproj.CoreCompileInputs.cache

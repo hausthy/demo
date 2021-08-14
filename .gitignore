@@ -10,3 +10,5 @@
 /StartupFilterDemo/obj
 /AspectCoreDemo/bin/Debug/netcoreapp3.1
 /AspectCoreDemo/obj
+/HttpClientFactoryPolly/bin/Debug/netcoreapp3.1
+/HttpClientFactoryPolly/obj
