@@ -35,7 +35,7 @@ namespace HttpClientFactoryDemo.Core
                 Console.WriteLine($"{traceId} from generated {DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()}.");
             }
 
-            if (!request.Headers.Contains("trace-id"))
+            if (!request.Headers.Contains("traceId"))
             {
                 request.Headers.TryAddWithoutValidation("traceId", traceId);
             }
