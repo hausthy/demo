@@ -33,7 +33,7 @@ namespace HttpClientFactoryPolly
             services.AddHttpClient("polly", client =>
             {
                 client.BaseAddress = new Uri("http://127.0.0.1:5001");
-                client.Timeout = TimeSpan.FromSeconds(2);
+                client.Timeout = TimeSpan.FromSeconds(10);
             })
              .AddPolicyHandler(FallbackPolicy)
              .AddPolicyHandler(CircuitBreakerPolicy)
@@ -69,14 +69,14 @@ namespace HttpClientFactoryPolly
                 {
                     var logger = serviceProvider.GetService<ILoggerFactory>()?.CreateLogger("FallbackPolicy");
 
-                    policy = Policy<HttpResponseMessage>.Handle<Exception>().FallbackAsync(new HttpResponseMessage
+                    policy = Policy<HttpResponseMessage>.Handle<Exception>().OrResult(hrm => hrm.StatusCode == HttpStatusCode.InternalServerError).FallbackAsync(new HttpResponseMessage
                     {
                         Content = new StringContent(JsonConvert.SerializeObject(new { code = 1098, msg = "服务暂不可用", data = new { } })),
                         StatusCode = HttpStatusCode.OK
                     }, async (b, ctx) =>
                     {
                         var logger = serviceProvider.GetService<ILoggerFactory>()?.CreateLogger("FallbackPolicy");
-                        logger?.LogError("request error", b.Exception.Message);
+                        logger?.LogError($"request error {b?.Result?.StatusCode} {b?.Exception?.Message}");
                         await Task.CompletedTask;
                     });
 
@@ -135,7 +135,7 @@ namespace HttpClientFactoryPolly
                 {
                     var logger = serviceProvider.GetService<ILoggerFactory>()?.CreateLogger("TimeOutPolicy");
 
-                    policy = Policy.TimeoutAsync<HttpResponseMessage>(1, (ctx, ts, tk, ex) =>
+                    policy = Policy.TimeoutAsync<HttpResponseMessage>(20, (ctx, ts, tk, ex) =>
                    {
                        logger?.LogError("TimeOutPolicy", ex.Message);
                        return Task.CompletedTask;

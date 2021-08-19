@@ -51,9 +51,9 @@ namespace HttpClientFactoryPolly.Controllers
         [HttpGet("polly")]
         public string GetPolly()
         {
-            Thread.Sleep(TimeSpan.FromSeconds(5));
+            //Thread.Sleep(TimeSpan.FromSeconds(5));
 
-            //throw new ArgumentNullException();
+            throw new ArgumentNullException();
 
             return "GetPolly";
         }
