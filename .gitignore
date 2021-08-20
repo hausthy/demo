@@ -14,3 +14,6 @@
 /HttpClientFactoryPolly/obj
 /HttpClientFactoryDemo/obj
 /HttpClientFactoryDemo/bin/Debug/netcoreapp3.1
+/AspectCorePolly/bin/Debug/netcoreapp3.1
+/AspectCorePolly/obj
+
