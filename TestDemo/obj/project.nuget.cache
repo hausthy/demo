@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "U8gLxrPY0FVQeALgbWOdmo2yvE0lWouZHa8ijViwPnZMylbjTt4g2kbVH1VmQWkNmtpbz2ojIBhZI1FyB8vRMg==",
+  "success": true,
+  "projectFilePath": "E:\\github\\hausthy\\demo\\TestDemo\\TestDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
