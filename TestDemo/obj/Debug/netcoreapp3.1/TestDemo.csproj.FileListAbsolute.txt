@@ -1,0 +1,16 @@
+E:\github\hausthy\demo\TestDemo\bin\Debug\netcoreapp3.1\TestDemo.exe
+E:\github\hausthy\demo\TestDemo\bin\Debug\netcoreapp3.1\TestDemo.deps.json
+E:\github\hausthy\demo\TestDemo\bin\Debug\netcoreapp3.1\TestDemo.runtimeconfig.json
+E:\github\hausthy\demo\TestDemo\bin\Debug\netcoreapp3.1\TestDemo.runtimeconfig.dev.json
+E:\github\hausthy\demo\TestDemo\bin\Debug\netcoreapp3.1\TestDemo.dll
+E:\github\hausthy\demo\TestDemo\bin\Debug\netcoreapp3.1\TestDemo.pdb
+E:\github\hausthy\demo\TestDemo\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\github\hausthy\demo\TestDemo\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\github\hausthy\demo\TestDemo\obj\Debug\netcoreapp3.1\TestDemo.csproj.AssemblyReference.cache
+E:\github\hausthy\demo\TestDemo\obj\Debug\netcoreapp3.1\TestDemo.AssemblyInfoInputs.cache
+E:\github\hausthy\demo\TestDemo\obj\Debug\netcoreapp3.1\TestDemo.AssemblyInfo.cs
+E:\github\hausthy\demo\TestDemo\obj\Debug\netcoreapp3.1\TestDemo.csproj.CoreCompileInputs.cache
+E:\github\hausthy\demo\TestDemo\obj\Debug\netcoreapp3.1\TestDemo.csproj.CopyComplete
+E:\github\hausthy\demo\TestDemo\obj\Debug\netcoreapp3.1\TestDemo.dll
+E:\github\hausthy\demo\TestDemo\obj\Debug\netcoreapp3.1\TestDemo.pdb
+E:\github\hausthy\demo\TestDemo\obj\Debug\netcoreapp3.1\TestDemo.genruntimeconfig.cache
