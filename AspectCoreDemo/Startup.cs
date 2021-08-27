@@ -28,8 +28,9 @@ namespace AspectCoreDemo
 
             services.ConfigureDynamicProxy(config =>
             {
-                //添加AOP的配置               
+                //添加AOP的配置
                 config.Interceptors.AddTyped<CustomInterceptor>(method => method.Name.EndsWith("Order"));
+                //config.Interceptors.AddServiced<CustomServiceInterceptor>(method => method.Name.EndsWith("Order"));
             });
         }
 
