@@ -13,6 +13,7 @@ namespace TestDemo.Services
             _iocServiceTest = iocServiceTest;
             Console.WriteLine($"ServiceTestA HashCode: {iocServiceTest.GetHashCode()}");
             Console.WriteLine($"ServiceTestA Get: {iocServiceTest.Get()}");
+            Console.WriteLine($"ServiceTestA GetOrderId: {iocServiceTest.GetOrderId()}");
         }
 
         public void Set(int val)
