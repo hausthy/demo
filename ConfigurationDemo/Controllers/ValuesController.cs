@@ -24,7 +24,7 @@ namespace ConfigurationDemo.Controllers
         [HttpGet]
         public string Get()
         {
-            return _configuration.GetValue<string>("Test");
+            return _configuration.GetValue<string>("Data.Setting:DefaultConnection:Connection.String");
         }
     }
 }

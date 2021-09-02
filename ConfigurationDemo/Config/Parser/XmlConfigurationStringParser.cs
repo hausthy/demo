@@ -107,8 +107,7 @@ namespace ConfigurationDemo.Config.Parser
                     // If this element is a self-closing element,
                     // we pretend that we just processed an EndElement node
                     // because a self-closing element contains an end within itself
-                    if (preNodeType == XmlNodeType.Element &&
-                        reader.IsEmptyElement)
+                    if (preNodeType == XmlNodeType.Element && reader.IsEmptyElement)
                     {
                         preNodeType = XmlNodeType.EndElement;
                     }
@@ -180,6 +179,11 @@ namespace ConfigurationDemo.Config.Parser
         // This method adds a key-value pair if current node in reader represents a common attribute
         private static void AddAttributePair(XmlReader reader, Stack<string> prefixStack, IDictionary<string, string> data, XmlWriter writer)
         {
+            if (string.Equals(reader.LocalName, NameAttributeKey, StringComparison.OrdinalIgnoreCase))
+            {
+                return;
+            }
+
             prefixStack.Push(reader.LocalName);
             var key = ConfigurationPath.Combine(prefixStack.Reverse());
             if (data.ContainsKey(key))

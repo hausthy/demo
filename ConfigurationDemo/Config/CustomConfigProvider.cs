@@ -25,7 +25,14 @@ namespace ConfigurationDemo.Config
                             <Provider>MySql</Provider>
                         </Inventory>
                         <numbers>
-                            <value>3</value>
+                            <value name=""1"">
+                                <ConnectionString>AnotherTestConnectionString1</ConnectionString>
+                                <Provider>MySql1</Provider>
+                            </value>
+                            <value name=""2"">
+                                <ConnectionString>AnotherTestConnectionString2</ConnectionString>
+                                <Provider>MySql2</Provider>
+                            </value>
                         </numbers>
                     </Data.Setting>
                 </settings>";
