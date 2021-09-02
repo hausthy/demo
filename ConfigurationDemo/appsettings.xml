@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <Data.Setting>
+    <DefaultConnection>
+      <Connection.String>Test.Connection.String</Connection.String>
+      <Provider>SqlClient</Provider>
+    </DefaultConnection>
+    <Inventory>
+      <ConnectionString>AnotherTestConnectionString</ConnectionString>
+      <Provider>MySql</Provider>
+    </Inventory>
+    <numbers>
+      <value>3</value>
+      <value>2</value>
+      <value>1</value>
+    </numbers>
+  </Data.Setting>
+</settings>
