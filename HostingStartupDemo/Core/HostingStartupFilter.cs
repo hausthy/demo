@@ -12,11 +12,10 @@ namespace HostingStartupDemo.Core
         {
             return app =>
             {
-
-                Console.WriteLine("HostingStartupFilter.Middleware");
-
+                Console.WriteLine("HostingStartupFilter.Configure1");
                 app.UseMiddleware<InWebMiddleware>();
                 next(app);
+                Console.WriteLine("HostingStartupFilter.Configure2");
             };
         }
     }

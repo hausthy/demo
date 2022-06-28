@@ -34,16 +34,25 @@ namespace HostingStartupDemo.Core
                 services.AddSingleton<IStartupFilter, HostingStartupFilter>();
             });
 
-            //可以添加Configure,会覆盖startup里的中间件
-           // builder.Configure((builder) =>
+           // //可以添加Configure,会覆盖startup里的中间件
+           // builder.Configure(app =>
            //{
+           //    //app.Use<InWebMiddleware>();
+
            //    Console.WriteLine("HostingStartupInWeb.Configure ");
 
-           //    builder.Use(async (context, next) =>
-           //    {
-           //        Console.WriteLine("HostingStartupInWeb.Configure.Use");
-           //        await next();
-           //    });
+           //    //app.Map("/services", builder => builder.Run(async ctx =>
+           //    //{
+           //    //    await ctx.Response.WriteAsync("test");
+           //    //}));
+
+
+
+           //    //builder.Use(async (context, next) =>
+           //    //{
+           //    //    Console.WriteLine("HostingStartupInWeb.Configure.Use");
+           //    //    await next();
+           //    //});
            //});
         }
     }

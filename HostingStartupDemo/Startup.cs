@@ -37,7 +37,7 @@ namespace HostingStartupDemo
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            Console.WriteLine("Startup.Configure ");
+            Console.WriteLine("Startup.Configure1");
 
             if (env.IsDevelopment())
             {
@@ -61,16 +61,20 @@ namespace HostingStartupDemo
             //    }
             //});
 
-            app.UseHealthChecks("/health", new HealthCheckOptions
-            {
-                AllowCachingResponses = true,
-                ResponseWriter = async (context, healthReport) => await context.Response.Body.WriteAsync(Encoding.UTF8.GetBytes("ok"))
-            });
+            app.UseHealthChecks("/health");
+
+            //app.UseHealthChecks("/health", new HealthCheckOptions
+            //{
+            //    AllowCachingResponses = true,
+            //    ResponseWriter = async (context, healthReport) => await context.Response.Body.WriteAsync(Encoding.UTF8.GetBytes("ok"))
+            //});
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            Console.WriteLine("Startup.Configure2");
         }
     }
 }
